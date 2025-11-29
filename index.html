@@ -240,9 +240,9 @@
                         <span id="typewriter" class="cursor-blink"></span>
                     </h2>
                     <p class="text-gray-400 max-w-lg mb-8 leading-relaxed">
-                        I am a Computer Science undergraduate crafting efficient
-                        back-end systems and responsive front-end interfaces. I
-                        turn caffeine into clean, scalable code.
+                        A tech enthusiast and a fast learner with a creative
+                        mind who quickly adapts to new tasks and comes up with
+                        fresh ideas. I turn caffeine into clean, scalable code.
                     </p>
 
                     <div class="flex flex-wrap gap-4">
@@ -328,18 +328,17 @@
                             Currently pursuing a degree in
                             <span class="text-term-cyan"
                                 >Computer Science & Engineering</span
-                            >. My journey started with a simple "Hello World" in
-                            Python, and now I'm architecting full-stack
-                            applications.
+                            >.
                         </p>
                         <p class="leading-relaxed text-gray-300">
-                            I am passionate about
-                            <span class="text-term-green">Open Source</span>,
+                            I’m driven by a love for
                             <span class="text-term-green">System Design</span>,
+                            <span class="text-term-green">Open Source</span>,
                             and
-                            <span class="text-term-green">AI Integration</span>.
-                            When I'm not coding, I'm likely configuring my Vim
-                            setup or exploring new Linux distros.
+                            <span class="text-term-green">Web Development</span
+                            >. When I’m not deep in code, you’ll probably find
+                            me with a guitar in hand or diving into a new tech
+                            rabbit hole.
                         </p>
                     </div>
                 </div>
@@ -432,7 +431,7 @@
                                     class="fas fa-chevron-right text-term-green mt-1 mr-2 text-xs"
                                 ></i>
                                 <span
-                                    >Working on developing and refining frontend
+                                    >Worked on developing and refining frontend
                                     web and mobile application UIs to ensure
                                     consistent cross- platform experiences.
                                     Contributed to testing, debugging, and
@@ -819,43 +818,18 @@
                         user@server:~$ mail -s "Subject"
                         thejas.meddepola@gmail.com
                     </div>
-                    <!-- <form id="contact-form" class="space-y-4">
-                        <div>
-                            <input
-                                type="text"
-                                placeholder="Name"
-                                class="w-full bg-term-bg border border-gray-700 p-2 text-white focus:outline-none focus:border-term-green rounded font-mono"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                class="w-full bg-term-bg border border-gray-700 p-2 text-white focus:outline-none focus:border-term-green rounded font-mono"
-                            />
-                        </div>
-                        <div>
-                            <textarea
-                                rows="4"
-                                placeholder="Message"
-                                class="w-full bg-term-bg border border-gray-700 p-2 text-white focus:outline-none focus:border-term-green rounded font-mono"
-                            ></textarea>
-                        </div>
+                    <a
+                        href="mailto:thejas.meddepola@gmail.com"
+                        rel="noopener noreferrer"
+                    >
                         <button
-                            type="submit"
+                            type="button"
+                            id="contact-close-btn"
                             class="w-full border border-term-green text-term-green hover:bg-term-green hover:text-black font-bold py-2 rounded transition-colors"
                         >
-                            Send Message
+                            Email Me
                         </button>
-                    </form> -->
-                    <a href="mailto:thejas.meddepola@gmail.com" rel="noopener noreferrer">
-                    <button
-                        type="button"
-                        id="contact-close-btn"
-                        class="w-full border border-term-green text-term-green hover:bg-term-green hover:text-black font-bold py-2 rounded transition-colors"
-                    >
-                        Email Me
-                    </button>
+                    </a>
                 </div>
 
                 <!-- <a
@@ -871,9 +845,7 @@
             <p class="font-mono mt-1">
                 git commit -m "Initial portfolio release"
             </p>
-            <p class="font-mono mt-1">
-                Thejas Meddepola
-            </p>
+            <p class="font-mono mt-1">Thejas Meddepola</p>
         </footer>
 
         <!-- JavaScript -->
@@ -892,7 +864,7 @@
 
             // 2. Typewriter Effect
             const textElement = document.getElementById("typewriter");
-            const phrases = ["CSE Undergraduate", "Full Stack Developer"];
+            const phrases = ["Developer","CSE Undergraduate"];
             let phraseIndex = 0;
             let charIndex = 0;
             let isDeleting = false;
@@ -942,6 +914,17 @@
                 link.addEventListener("click", () => {
                     menu.classList.add("hidden");
                 });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!menu.classList.contains("hidden")) {
+                    const isMenu = menu.contains(event.target);
+                    const isButton = btn.contains(event.target);
+                    if (!isMenu && !isButton) {
+                        menu.classList.add("hidden");
+                    }
+                }
             });
 
             // 4. Form Simulation (Prevent Default)
