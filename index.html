@@ -4,8 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Dev_Portfolio // User_Root</title>
+        <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
 
         <!-- Tailwind CSS -->
+        <script>
+            window.location.href = "Other pages/maintenance.html";
+        </script>
         <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- Google Fonts: JetBrains Mono (The ultimate coding font) -->
@@ -697,9 +701,9 @@
                             >
                         </div>
                     </div>
-                     <div>
+                    <div>
                         <h3 class="text-lg font-bold text-white mb-4">
-                            <span class="text-term-cyan">></span> 
+                            <span class="text-term-cyan">></span>
                             Database Systems
                         </h3>
                         <div class="flex flex-wrap gap-3">
@@ -715,7 +719,7 @@
                     </div>
                     <div>
                         <h3 class="text-lg font-bold text-white mb-4">
-                            <span class="text-term-cyan">></span> 
+                            <span class="text-term-cyan">></span>
                             Tools
                         </h3>
                         <div class="flex flex-wrap gap-3">
@@ -781,17 +785,13 @@
                         class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors"
                     >
                         <i class="fas fa-certificate text-term-green"></i>
-                        <span
-                            >Play It Safe: Manage Security Risks</span
-                        >
+                        <span>Play It Safe: Manage Security Risks</span>
                     </div>
                     <div
                         class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors"
                     >
                         <i class="fas fa-certificate text-term-green"></i>
-                        <span
-                            >Foundations of Cybersecurity</span
-                        >
+                        <span>Foundations of Cybersecurity</span>
                     </div>
                 </div>
             </section>
@@ -808,18 +808,18 @@
                     Get In Touch
                 </h3>
                 <p class="text-gray-400 mb-10">
-                    I'm currently looking for internship opportunities. Whether
-                    you have a question or just want to say hi, my inbox is
-                    always open!
+                    I'm currently looking for opportunities. Whether you have a
+                    question or just want to say hi, my inbox is always open!
                 </p>
 
                 <div
                     class="bg-term-card p-6 rounded text-left border border-gray-800 mb-8"
                 >
                     <div class="text-gray-500 text-xs mb-2">
-                        user@server:~$ mail -s "Subject" alex@dev.com
+                        user@server:~$ mail -s "Subject"
+                        thejas.meddepola@gmail.com
                     </div>
-                    <form id="contact-form" class="space-y-4">
+                    <!-- <form id="contact-form" class="space-y-4">
                         <div>
                             <input
                                 type="text"
@@ -847,21 +847,32 @@
                         >
                             Send Message
                         </button>
-                    </form>
+                    </form> -->
+                    <a href="mailto:thejas.meddepola@gmail.com" rel="noopener noreferrer">
+                    <button
+                        type="button"
+                        id="contact-close-btn"
+                        class="w-full border border-term-green text-term-green hover:bg-term-green hover:text-black font-bold py-2 rounded transition-colors"
+                    >
+                        Email Me
+                    </button>
                 </div>
 
-                <a
+                <!-- <a
                     href="mailto:email@example.com"
                     class="text-term-dim hover:text-term-green text-sm"
                     >Or email me directly</a
-                >
+                > -->
             </section>
         </main>
 
         <footer class="text-center py-6 text-xs text-gray-500">
-            <p>Built with HTML, Tailwind & Coffee.</p>
+            <!-- <p>Built with HTML, Tailwind & Coffee.</p> -->
             <p class="font-mono mt-1">
                 git commit -m "Initial portfolio release"
+            </p>
+            <p class="font-mono mt-1">
+                Thejas Meddepola
             </p>
         </footer>
 
