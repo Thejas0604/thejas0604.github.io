@@ -1,386 +1,482 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-XLBZVGY31M"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-XLBZVGY31M");
+        </script>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLBZVGY31M"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-XLBZVGY31M');
-    </script>
+        <meta
+            name="description"
+            content="Thejas Meddepola's developer portfolio. Computer Science & Engineering undergraduate, tech enthusiast, and creative coder. Explore projects, experience, skills, and achievements."
+        />
+        <meta
+            name="keywords"
+            content="Thejas Meddepola, developer, portfolio, computer science, software engineer, Sri Lanka, CSE, projects, blog, resume, web developer"
+        />
+        <meta
+            property="og:title"
+            content="Thejas Meddepola | Developer Portfolio"
+        />
+        <meta
+            property="og:description"
+            content="Thejas Meddepola's developer portfolio. Computer Science & Engineering undergraduate, tech enthusiast, and creative coder. Explore projects, experience, skills, and achievements."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://thejas.me/" />
+        <meta
+            property="og:image"
+            content="https://thejas.me/assets/my_photo.jpg"
+        />
+        <title>Thejas Meddepola | Developer Portfolio</title>
+        <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
 
-    <meta name="description"
-        content="Thejas Meddepola's developer portfolio. Computer Science & Engineering undergraduate, tech enthusiast, and creative coder. Explore projects, experience, skills, and achievements." />
-    <meta name="keywords"
-        content="Thejas Meddepola, developer, portfolio, computer science, software engineer, Sri Lanka, CSE, projects, blog, resume, web developer" />
-    <meta property="og:title" content="Thejas Meddepola | Developer Portfolio" />
-    <meta property="og:description"
-        content="Thejas Meddepola's developer portfolio. Computer Science & Engineering undergraduate, tech enthusiast, and creative coder. Explore projects, experience, skills, and achievements." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://thejas.me/" />
-    <meta property="og:image" content="https://thejas.me/assets/my_photo.jpg" />
-    <title>Thejas Meddepola | Developer Portfolio</title>
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
-
-    <!-- Tailwind CSS -->
-    <!-- <script>
+        <!-- Tailwind CSS -->
+        <!-- <script>
             window.location.href = "Other pages/maintenance.html";
         </script> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: JetBrains Mono (The ultimate coding font) -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap"
-        rel="stylesheet" />
+        <!-- Google Fonts: JetBrains Mono (The ultimate coding font) -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
 
-    <!-- Custom Config for Tailwind -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "term-bg": "#0d1117",
-                        "term-card": "#161b22",
-                        "term-green": "#00ff41",
-                        "term-dim": "#238636",
-                        "term-cyan": "#58a6ff",
-                        "term-gray": "#8b949e",
-                    },
-                    fontFamily: {
-                        mono: ['"JetBrains Mono"', "monospace"],
+        <!-- Custom Config for Tailwind -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "term-bg": "#0d1117",
+                            "term-card": "#161b22",
+                            "term-green": "#00ff41",
+                            "term-dim": "#238636",
+                            "term-cyan": "#58a6ff",
+                            "term-gray": "#8b949e",
+                        },
+                        fontFamily: {
+                            mono: ['"JetBrains Mono"', "monospace"],
+                        },
                     },
                 },
-            },
-        };
-    </script>
+            };
+        </script>
 
-    <style>
-        /* Base Styles */
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            font-family: "JetBrains Mono", monospace;
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0d1117;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #238636;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #00ff41;
-        }
-
-        /* Utilities */
-        .glass-nav {
-            background: rgba(13, 17, 23, 0.85);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(48, 54, 61, 0.5);
-        }
-
-        .terminal-shadow {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
-        /* Animations */
-        @keyframes blink {
-
-            0%,
-            100% {
-                opacity: 1;
+        <style>
+            /* Base Styles */
+            body {
+                background-color: #0d1117;
+                color: #c9d1d9;
+                font-family: "JetBrains Mono", monospace;
+                overflow-x: hidden;
             }
 
-            50% {
-                opacity: 0;
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
             }
-        }
+            ::-webkit-scrollbar-track {
+                background: #0d1117;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #238636;
+                border-radius: 4px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #00ff41;
+            }
 
-        .cursor-blink::after {
-            content: "█";
-            animation: blink 1s step-end infinite;
-            color: #00ff41;
-            margin-left: 2px;
-        }
+            /* Utilities */
+            .glass-nav {
+                background: rgba(13, 17, 23, 0.85);
+                backdrop-filter: blur(8px);
+                border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+            }
 
-        /* Glitch Effect on Hover for Headers */
-        .glitch-hover:hover {
-            text-shadow: 2px 0 #58a6ff, -2px 0 #ff0000;
-        }
+            .terminal-shadow {
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5),
+                    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
 
-        .timeline-line::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 15px;
-            /* Adjust based on dot size */
-            width: 2px;
-            background: #238636;
-            z-index: 0;
-        }
+            /* Animations */
+            @keyframes blink {
+                0%,
+                100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+            .cursor-blink::after {
+                content: "█";
+                animation: blink 1s step-end infinite;
+                color: #00ff41;
+                margin-left: 2px;
+            }
 
-        /* Scanline Effect Overlay (Subtle) */
-        .scanlines {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom,
+            /* Glitch Effect on Hover for Headers */
+            .glitch-hover:hover {
+                text-shadow: 2px 0 #58a6ff, -2px 0 #ff0000;
+            }
+
+            .timeline-line::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 15px; /* Adjust based on dot size */
+                width: 2px;
+                background: #238636;
+                z-index: 0;
+            }
+
+            /* Scanline Effect Overlay (Subtle) */
+            .scanlines {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    to bottom,
                     rgba(255, 255, 255, 0),
                     rgba(255, 255, 255, 0) 50%,
                     rgba(0, 0, 0, 0.1) 50%,
-                    rgba(0, 0, 0, 0.1));
-            background-size: 100% 4px;
-            pointer-events: none;
-            z-index: 50;
-            opacity: 0.3;
-        }
-    </style>
-</head>
+                    rgba(0, 0, 0, 0.1)
+                );
+                background-size: 100% 4px;
+                pointer-events: none;
+                z-index: 50;
+                opacity: 0.3;
+            }
+        </style>
+    </head>
+    <body class="antialiased">
+        <!-- Scanline Overlay -->
+        <div class="scanlines"></div>
 
-<body class="antialiased">
-    <!-- Scanline Overlay -->
-    <div class="scanlines"></div>
+        <!-- Navigation -->
+        <header
+            id="navbar"
+            class="fixed w-full top-0 z-40 transition-all duration-300 py-4 px-6 md:px-12 border-b border-transparent"
+        >
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <!-- Logo/Prompt -->
+                <a
+                    href="#"
+                    class="text-xl font-bold text-term-green hover:text-white transition-colors"
+                >
+                    <span class="text-term-cyan">~</span>/profile-home
+                </a>
 
-    <!-- Navigation -->
-    <header id="navbar"
-        class="fixed w-full top-0 z-40 transition-all duration-300 py-4 px-6 md:px-12 border-b border-transparent">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Logo/Prompt -->
-            <a href="#" class="text-xl font-bold text-term-green hover:text-white transition-colors">
-                <span class="text-term-cyan">~</span>/profile-home
-            </a>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 text-sm">
+                    <a
+                        href="#about"
+                        class="hover:text-term-green transition-colors"
+                        ><span class="text-term-dim">01.</span> About</a
+                    >
+                    <a
+                        href="#education"
+                        class="hover:text-term-green transition-colors"
+                        ><span class="text-term-dim">02.</span> Edu</a
+                    >
+                    <a
+                        href="#experience"
+                        class="hover:text-term-green transition-colors"
+                        ><span class="text-term-dim">03.</span> Exp</a
+                    >
+                    <a
+                        href="#projects"
+                        class="hover:text-term-green transition-colors"
+                        ><span class="text-term-dim">04.</span> Proj</a
+                    >
+                    <a
+                        href="#skills"
+                        class="hover:text-term-green transition-colors"
+                        ><span class="text-term-dim">05.</span> Skills</a
+                    >
+                    <a
+                        href="#connect"
+                        class="text-term-cyan border border-term-cyan px-4 py-1 rounded hover:bg-term-cyan hover:bg-opacity-10 transition-colors"
+                        >Connect</a
+                    >
+                </nav>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex space-x-8 text-sm">
-                <a href="#about" class="hover:text-term-green transition-colors"><span class="text-term-dim">01.</span>
-                    About</a>
-                <a href="#education" class="hover:text-term-green transition-colors"><span
-                        class="text-term-dim">02.</span> Edu</a>
-                <a href="#experience" class="hover:text-term-green transition-colors"><span
-                        class="text-term-dim">03.</span> Exp</a>
-                <a href="#projects" class="hover:text-term-green transition-colors"><span
-                        class="text-term-dim">04.</span> Proj</a>
-                <a href="#skills" class="hover:text-term-green transition-colors"><span class="text-term-dim">05.</span>
-                    Skills</a>
-                <a href="#connect"
-                    class="text-term-cyan border border-term-cyan px-4 py-1 rounded hover:bg-term-cyan hover:bg-opacity-10 transition-colors">Connect</a>
-            </nav>
+                <!-- Mobile Hamburger -->
+                <button
+                    id="mobile-menu-btn"
+                    class="md:hidden text-term-green focus:outline-none"
+                >
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
 
-            <!-- Mobile Hamburger -->
-            <button id="mobile-menu-btn" class="md:hidden text-term-green focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
+            <!-- Mobile Menu Dropdown -->
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden absolute top-full left-0 w-full bg-term-card border-b border-gray-800 p-6 flex flex-col space-y-4 shadow-xl"
+            >
+                <a href="#about" class="mobile-link hover:text-term-green"
+                    >01. About</a
+                >
+                <a href="#education" class="mobile-link hover:text-term-green"
+                    >02. Education</a
+                >
+                <a href="#experience" class="mobile-link hover:text-term-green"
+                    >03. Experience</a
+                >
+                <a href="#projects" class="mobile-link hover:text-term-green"
+                    >04. Projects</a
+                >
+                <a href="#skills" class="mobile-link hover:text-term-green"
+                    >05. Skills</a
+                >
+                <a href="#connect" class="mobile-link text-term-cyan"
+                    >Connect</a
+                >
+            </div>
+        </header>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 w-full bg-term-card border-b border-gray-800 p-6 flex flex-col space-y-4 shadow-xl">
-            <a href="#about" class="mobile-link hover:text-term-green">01. About</a>
-            <a href="#education" class="mobile-link hover:text-term-green">02. Education</a>
-            <a href="#experience" class="mobile-link hover:text-term-green">03. Experience</a>
-            <a href="#projects" class="mobile-link hover:text-term-green">04. Projects</a>
-            <a href="#skills" class="mobile-link hover:text-term-green">05. Skills</a>
-            <a href="#connect" class="mobile-link text-term-cyan">Connect</a>
-        </div>
-    </header>
+        <main class="max-w-6xl mx-auto px-6 pt-24">
+            <!-- HERO SECTION -->
+            <section
+                id="hero"
+                class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-12 -mt-16"
+            >
+                <div class="w-full md:w-2/3">
+                    <p class="text-term-cyan mb-4 font-bold">#!/bin/bash</p>
+                    <h1
+                        class="text-4xl md:text-6xl font-bold mb-4 text-white tracking-tight"
+                    >
+                        Hello, I'm
+                        <span class="text-term-green">Thejas</span>.
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-term-gray mb-6 h-8">
+                        <span id="typewriter" class="cursor-blink"></span>
+                    </h2>
+                    <p class="text-gray-400 max-w-lg mb-8 leading-relaxed">
+                        A tech enthusiast and a fast learner with a creative
+                        mind who quickly adapts to new tasks and comes up with
+                        fresh ideas. I turn caffeine into clean, scalable code.
+                    </p>
 
-    <main class="max-w-6xl mx-auto px-6 pt-24">
-        <!-- HERO SECTION -->
-        <section id="hero"
-            class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-12 -mt-16">
-            <div class="w-full md:w-2/3">
-                <p class="text-term-cyan mb-4 font-bold">#!/bin/bash</p>
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white tracking-tight">
-                    Hello, I'm
-                    <span class="text-term-green">Thejas</span>.
-                </h1>
-                <h2 class="text-xl md:text-2xl text-term-gray mb-6 h-8">
-                    <span id="typewriter" class="cursor-blink"></span>
-                </h2>
-                <p class="text-gray-400 max-w-lg mb-8 leading-relaxed">
-                    A tech enthusiast and a fast learner with a creative
-                    mind who quickly adapts to new tasks and comes up with
-                    fresh ideas. I turn caffeine into clean, scalable code.
-                </p>
-
-                <div class="flex flex-wrap gap-4">
-                    <!-- <a href="#projects" class="bg-term-dim hover:bg-term-green text-white hover:text-black font-bold py-3 px-6 rounded transition-all duration-300">
+                    <div class="flex flex-wrap gap-4">
+                        <!-- <a href="#projects" class="bg-term-dim hover:bg-term-green text-white hover:text-black font-bold py-3 px-6 rounded transition-all duration-300">
                         ./view_projects.sh
                     </a> -->
-                    <a href="#projects"
-                        class="bg-term-dim hover:bg-term-green text-white hover:text-black font-bold py-3 px-6 rounded transition-all duration-300">
-                        Projects
-                    </a>
-                    <div class="flex items-center gap-4 px-4">
-                        <a href="https://github.com/Thejas0604"
-                            class="text-2xl text-gray-400 hover:text-term-cyan transition-transform hover:-translate-y-1"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/thejasmeddepola/"
-                            class="text-2xl text-gray-400 hover:text-term-cyan transition-transform hover:-translate-y-1"><i
-                                class="fab fa-linkedin"></i></a>
-                        <!-- <a
+                        <a
+                            href="#projects"
+                            class="bg-term-dim hover:bg-term-green text-white hover:text-black font-bold py-3 px-6 rounded transition-all duration-300"
+                        >
+                            Projects
+                        </a>
+                        <div class="flex items-center gap-4 px-4">
+                            <a
+                                href="https://github.com/Thejas0604"
+                                class="text-2xl text-gray-400 hover:text-term-cyan transition-transform hover:-translate-y-1"
+                                ><i class="fab fa-github"></i
+                            ></a>
+                            <a
+                                href="https://www.linkedin.com/in/thejasmeddepola/"
+                                class="text-2xl text-gray-400 hover:text-term-cyan transition-transform hover:-translate-y-1"
+                                ><i class="fab fa-linkedin"></i
+                            ></a>
+                            <!-- <a
                                 href="#"
                                 class="text-2xl text-gray-400 hover:text-term-cyan transition-transform hover:-translate-y-1"
                                 ><i class="fab fa-twitter"></i
                             ></a> -->
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Profile Image Placeholder -->
-            <div class="w-full md:w-1/3 flex justify-center">
-                <div
-                    class="relative w-64 h-64 md:w-80 md:h-80 border-2 border-term-green rounded-full overflow-hidden terminal-shadow group">
-                    <img src="/assets/my_photo.jpg" alt="Thejas Meddepola Profile Picture"
-                        class="w-full h-full object-cover object-top scale-120 -translate-y-4" />
-
+                <!-- Profile Image Placeholder -->
+                <div class="w-full md:w-1/3 flex justify-center">
                     <div
-                        class="absolute inset-0 bg-term-transparent opacity-10 group-hover:opacity-0 transition-opacity pointer-events-none">
+                        class="relative w-64 h-64 md:w-80 md:h-80 border-2 border-term-green rounded-full overflow-hidden terminal-shadow group"
+                    >
+                        <img
+                            src="/assets/my_photo.jpg"
+                            alt="Profile Picture"
+                            class="w-full h-full object-cover object-top scale-120 -translate-y-4"
+                        />
+
+                        <div
+                            class="absolute inset-0 bg-term-transparent opacity-10 group-hover:opacity-0 transition-opacity pointer-events-none"
+                        ></div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ABOUT SECTION -->
-        <section id="about" class="py-20">
-            <div class="border border-gray-800 bg-term-card rounded-lg overflow-hidden shadow-xl">
-                <!-- Terminal Title Bar -->
-                <div class="bg-gray-800 px-4 py-2 flex items-center justify-between">
-                    <div class="flex gap-2">
-                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div class="text-xs text-gray-400">
-                        user@portfolio:~/about
-                    </div>
-                    <div class="w-10"></div>
-                </div>
-                <!-- Content -->
-                <div class="p-6 md:p-10">
-                    <div class="text-term-gray mb-4">
-                        <span class="text-term-green">user@portfolio:~$</span>
-                        cat about_me.txt
-                    </div>
-                    <p class="leading-relaxed mb-4 text-gray-300">
-                        Currently pursuing a degree in
-                        <span class="text-term-cyan">Computer Science & Engineering</span>.
-                    </p>
-                    <p class="leading-relaxed text-gray-300">
-                        I’m driven by a love for
-                        <span class="text-term-green">System Design</span>,
-                        <span class="text-term-green">Open Source</span>,
-                        and
-                        <span class="text-term-green">Web Development</span>. When I’m not deep in code, you’ll probably
-                        find
-                        me with a guitar in hand or diving into a new tech
-                        rabbit hole.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- EDUCATION SECTION -->
-        <section id="education" class="py-20">
-            <h2 class="text-3xl font-bold mb-10 flex items-center">
-                <span class="text-term-green mr-4">02.</span> Education
-                <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
-            </h2>
-
-            <div class="relative timeline-line pl-8 space-y-12">
-                <!-- Item 1 -->
-                <div class="relative z-10">
-                    <div class="absolute -left-10 bg-term-bg border-2 border-term-green rounded-full w-4 h-4 mt-1.5">
-                    </div>
-                    <h3 class="text-xl font-bold text-white">
-                        B.Sc. Eng (Hons) Computer Science & Engineering
-                    </h3>
-                    <p class="text-term-cyan">
-                        University of Moratuwa, Sri Lanka
-                    </p>
-                    <p class="text-sm text-term-gray italic">
-                        2021 - Present
-                    </p>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white tracking-tight">
-                        Hello, I'm
-                        <span class="text-term-green">Thejas Meddepola</span>.
-                    </h1>
-                    Algorithms
-                    </li> -->
-                    <!-- <li>Vice President of for the Public Relations for the Computer Science and Engineering Society</li> -->
-                    </ul>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="relative z-10">
-                    <div class="absolute -left-10 bg-term-bg border-2 border-term-gray rounded-full w-4 h-4 mt-1.5">
-                    </div>
-                    <h3 class="text-xl font-bold text-white">
-                        G.C.E. Advanced Level
-                    </h3>
-                    <p class="text-term-cyan">
-                        D.S.Senanayke College, Colombo 7, Sri Lanka
-                    </p>
-                    <p class="text-sm text-term-gray italic">2018 - 2020</p>
-                    <ul class="list-disc list-inside mt-2 text-gray-400 text-sm">
-                        <li>Physical Science Stream</li>
-                        <li>Island Rank 87</li>
-                        <li>District Rank(Colombo) 28</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- EXPERIENCE SECTION -->
-        <section id="experience" class="py-20">
-            <h2 class="text-3xl font-bold mb-10 flex items-center">
-                <span class="text-term-green mr-4">03.</span> Experience
-                <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
-            </h2>
-
-            <div class="grid gap-6">
-                <!-- Job 1 -->
+            <!-- ABOUT SECTION -->
+            <section id="about" class="py-20">
                 <div
-                    class="bg-term-card p-6 rounded border border-gray-800 hover:border-term-green transition-colors group">
-                    <div class="flex justify-between flex-wrap gap-2 mb-2">
-                        <h3 class="text-xl font-bold text-white group-hover:text-term-green transition-colors">
-                            Software Engineering Intern
-                        </h3>
-                        <span class="text-sm text-term-cyan bg-term-cyan bg-opacity-10 px-2 py-1 rounded">Oct 2024 - Jun
-                            2025</span>
+                    class="border border-gray-800 bg-term-card rounded-lg overflow-hidden shadow-xl"
+                >
+                    <!-- Terminal Title Bar -->
+                    <div
+                        class="bg-gray-800 px-4 py-2 flex items-center justify-between"
+                    >
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div
+                                class="w-3 h-3 rounded-full bg-yellow-500"
+                            ></div>
+                            <div
+                                class="w-3 h-3 rounded-full bg-green-500"
+                            ></div>
+                        </div>
+                        <div class="text-xs text-gray-400">
+                            user@portfolio:~/about
+                        </div>
+                        <div class="w-10"></div>
                     </div>
-                    <h4 class="text-gray-400 mb-4">Tortil Inc.</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-term-green mt-1 mr-2 text-xs"></i>
-                            <span>Worked on developing and refining frontend
-                                web and mobile application UIs to ensure
-                                consistent cross- platform experiences.
-                                Contributed to testing, debugging, and
-                                developing SDKs and integrating APIs,
-                                supporting end-to-end functionality and
-                                performance improvements.</span>
-                        </li>
-                        <!-- <li class="flex items-start">
+                    <!-- Content -->
+                    <div class="p-6 md:p-10">
+                        <div class="text-term-gray mb-4">
+                            <span class="text-term-green"
+                                >user@portfolio:~$</span
+                            >
+                            cat about_me.txt
+                        </div>
+                        <p class="leading-relaxed mb-4 text-gray-300">
+                            Currently pursuing a degree in
+                            <span class="text-term-cyan"
+                                >Computer Science & Engineering</span
+                            >.
+                        </p>
+                        <p class="leading-relaxed text-gray-300">
+                            I’m driven by a love for
+                            <span class="text-term-green">System Design</span>,
+                            <span class="text-term-green">Open Source</span>,
+                            and
+                            <span class="text-term-green">Web Development</span
+                            >. When I’m not deep in code, you’ll probably find
+                            me with a guitar in hand or diving into a new tech
+                            rabbit hole.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EDUCATION SECTION -->
+            <section id="education" class="py-20">
+                <h2 class="text-3xl font-bold mb-10 flex items-center">
+                    <span class="text-term-green mr-4">02.</span> Education
+                    <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
+                </h2>
+
+                <div class="relative timeline-line pl-8 space-y-12">
+                    <!-- Item 1 -->
+                    <div class="relative z-10">
+                        <div
+                            class="absolute -left-10 bg-term-bg border-2 border-term-green rounded-full w-4 h-4 mt-1.5"
+                        ></div>
+                        <h3 class="text-xl font-bold text-white">
+                            B.Sc. Eng (Hons) Computer Science & Engineering
+                        </h3>
+                        <p class="text-term-cyan">
+                            University of Moratuwa, Sri Lanka
+                        </p>
+                        <p class="text-sm text-term-gray italic">
+                            2021 - Present
+                        </p>
+                        <ul
+                            class="list-disc list-inside mt-2 text-gray-400 text-sm"
+                        >
+                            <li>CGPA: 3.56/4.0</li>
+                            <!-- <li>
+                                Specializing in Software Engineering &
+                                Algorithms
+                            </li> -->
+                            <!-- <li>Vice President of for the Public Relations for the Computer Science and Engineering Society</li> -->
+                        </ul>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative z-10">
+                        <div
+                            class="absolute -left-10 bg-term-bg border-2 border-term-gray rounded-full w-4 h-4 mt-1.5"
+                        ></div>
+                        <h3 class="text-xl font-bold text-white">
+                            G.C.E. Advanced Level
+                        </h3>
+                        <p class="text-term-cyan">
+                            D.S.Senanayke College, Colombo 7, Sri Lanka
+                        </p>
+                        <p class="text-sm text-term-gray italic">2018 - 2020</p>
+                        <ul
+                            class="list-disc list-inside mt-2 text-gray-400 text-sm"
+                        >
+                            <li>Physical Science Stream</li>
+                            <li>Island Rank 87</li>
+                            <li>District Rank(Colombo) 28</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE SECTION -->
+            <section id="experience" class="py-20">
+                <h2 class="text-3xl font-bold mb-10 flex items-center">
+                    <span class="text-term-green mr-4">03.</span> Experience
+                    <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
+                </h2>
+
+                <div class="grid gap-6">
+                    <!-- Job 1 -->
+                    <div
+                        class="bg-term-card p-6 rounded border border-gray-800 hover:border-term-green transition-colors group"
+                    >
+                        <div class="flex justify-between flex-wrap gap-2 mb-2">
+                            <h3
+                                class="text-xl font-bold text-white group-hover:text-term-green transition-colors"
+                            >
+                                Software Engineering Intern
+                            </h3>
+                            <span
+                                class="text-sm text-term-cyan bg-term-cyan bg-opacity-10 px-2 py-1 rounded"
+                                >Oct 2024 - Jun 2025</span
+                            >
+                        </div>
+                        <h4 class="text-gray-400 mb-4">Tortil Inc.</h4>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-chevron-right text-term-green mt-1 mr-2 text-xs"
+                                ></i>
+                                <span
+                                    >Worked on developing and refining frontend
+                                    web and mobile application UIs to ensure
+                                    consistent cross- platform experiences.
+                                    Contributed to testing, debugging, and
+                                    developing SDKs and integrating APIs,
+                                    supporting end-to-end functionality and
+                                    performance improvements.</span
+                                >
+                            </li>
+                            <!-- <li class="flex items-start">
                                 <i
                                     class="fas fa-chevron-right text-term-green mt-1 mr-2 text-xs"
                                 ></i>
@@ -389,50 +485,64 @@
                                     a React-based dashboard.</span
                                 >
                             </li> -->
-                    </ul>
-                </div>
-
-                <!-- Job 2 -->
-                <div
-                    class="bg-term-card p-6 rounded border border-gray-800 hover:border-term-green transition-colors group">
-                    <div class="flex justify-between flex-wrap gap-2 mb-2">
-                        <h3 class="text-xl font-bold text-white group-hover:text-term-green transition-colors">
-                            Teaching Assistant
-                        </h3>
-                        <span class="text-sm text-term-cyan bg-term-cyan bg-opacity-10 px-2 py-1 rounded">Aug 2025 - Nov
-                            2025</span>
+                        </ul>
                     </div>
-                    <h4 class="text-gray-400 mb-4">
-                        University of Moratuwa, Department of Computer
-                        Science & Engineering
-                    </h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-term-green mt-1 mr-2 text-xs"></i>
-                            <span>Conducted weekly lab sessions for
-                                undergraduate students covering CS2033 Data
-                                Communication and Networks Module.</span>
-                        </li>
-                    </ul>
+
+                    <!-- Job 2 -->
+                    <div
+                        class="bg-term-card p-6 rounded border border-gray-800 hover:border-term-green transition-colors group"
+                    >
+                        <div class="flex justify-between flex-wrap gap-2 mb-2">
+                            <h3
+                                class="text-xl font-bold text-white group-hover:text-term-green transition-colors"
+                            >
+                                Teaching Assistant
+                            </h3>
+                            <span
+                                class="text-sm text-term-cyan bg-term-cyan bg-opacity-10 px-2 py-1 rounded"
+                                >Aug 2025 - Nov 2025</span
+                            >
+                        </div>
+                        <h4 class="text-gray-400 mb-4">
+                            University of Moratuwa, Department of Computer
+                            Science & Engineering
+                        </h4>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-chevron-right text-term-green mt-1 mr-2 text-xs"
+                                ></i>
+                                <span
+                                    >Conducted weekly lab sessions for
+                                    undergraduate students covering CS2033 Data
+                                    Communication and Networks Module.</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- PROJECTS SECTION -->
-        <section id="projects" class="py-20">
-            <h2 class="text-3xl font-bold mb-10 flex items-center">
-                <span class="text-term-green mr-4">04.</span> Projects
-                <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
-            </h2>
+            <!-- PROJECTS SECTION -->
+            <section id="projects" class="py-20">
+                <h2 class="text-3xl font-bold mb-10 flex items-center">
+                    <span class="text-term-green mr-4">04.</span> Projects
+                    <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
+                </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
                 <div
-                    class="bg-term-card rounded-lg overflow-hidden border border-gray-800 hover:translate-y-[-5px] transition-transform duration-300">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <i class="far fa-folder text-4xl text-term-green"></i>
-                            <!-- <div class="flex gap-4">
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <!-- Project 1 -->
+                    <div
+                        class="bg-term-card rounded-lg overflow-hidden border border-gray-800 hover:translate-y-[-5px] transition-transform duration-300"
+                    >
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <i
+                                    class="far fa-folder text-4xl text-term-green"
+                                ></i>
+                                <!-- <div class="flex gap-4">
                                     <a
                                         href="#"
                                         class="text-gray-400 hover:text-white"
@@ -446,377 +556,455 @@
                                         ></i
                                     ></a>
                                 </div> -->
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">
-                            Cryptographically Secure Electronic Voting
-                            System
-                        </h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            A secure and transparent electronic voting
-                            system with cryptographic verification of votes.
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-term-dim">
-                            <span>Java</span>
-                            <span>PostgreSQL</span>
-                            <span>ReactNative</span>
-                            <span>Expo</span>
-                            <span>Typescript</span>
-                            <span>Next.js</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">
+                                Cryptographically Secure Electronic Voting
+                                System
+                            </h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                A secure and transparent electronic voting
+                                system with cryptographic verification of votes.
+                            </p>
+                            <div
+                                class="flex flex-wrap gap-2 text-xs font-mono text-term-dim"
+                            >
+                                <span>Java</span>
+                                <span>PostgreSQL</span>
+                                <span>ReactNative</span>
+                                <span>Expo</span>
+                                <span>Typescript</span>
+                                <span>Next.js</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Project 2 -->
-                <div
-                    class="bg-term-card rounded-lg overflow-hidden border border-gray-800 hover:translate-y-[-5px] transition-transform duration-300">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <i class="far fa-folder text-4xl text-term-green"></i>
-                            <div class="flex gap-4">
-                                <a href="https://github.com/Thejas0604/blog-project"
-                                    class="text-gray-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
-                                <!-- <a
+                    <!-- Project 2 -->
+                    <div
+                        class="bg-term-card rounded-lg overflow-hidden border border-gray-800 hover:translate-y-[-5px] transition-transform duration-300"
+                    >
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <i
+                                    class="far fa-folder text-4xl text-term-green"
+                                ></i>
+                                <div class="flex gap-4">
+                                    <a
+                                        href="https://github.com/Thejas0604/blog-project"
+                                        class="text-gray-400 hover:text-white"
+                                        ><i class="fab fa-github text-xl"></i
+                                    ></a>
+                                    <!-- <a
                                         href="#"
                                         class="text-gray-400 hover:text-white"
                                         ><i
                                             class="fas fa-external-link-alt text-xl"
                                         ></i
                                     ></a> -->
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">
+                                BlogMe
+                            </h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Comprehensive implementation of a blog system,
+                                developed to manage various blogging operations
+                                efficiently.
+                            </p>
+                            <div
+                                class="flex flex-wrap gap-2 text-xs font-mono text-term-dim"
+                            >
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Express</span>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">
-                            BlogMe
-                        </h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            Comprehensive implementation of a blog system,
-                            developed to manage various blogging operations
-                            efficiently.
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-term-dim">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>Express</span>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div
+                        class="bg-term-card rounded-lg overflow-hidden border border-gray-800 hover:translate-y-[-5px] transition-transform duration-300"
+                    >
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <i
+                                    class="far fa-folder text-4xl text-term-green"
+                                ></i>
+                                <div class="flex gap-4">
+                                    <a
+                                        href="https://github.com/Thejas0604/cli-chatroom"
+                                        class="text-gray-400 hover:text-white"
+                                        ><i class="fab fa-github text-xl"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">
+                                CLI Chatroom
+                            </h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                A real-time Chat Client implemented using
+                                Python's socket programming and threading
+                                capabilities.
+                            </p>
+                            <div
+                                class="flex flex-wrap gap-2 text-xs font-mono text-term-dim"
+                            >
+                                <span>Python</span>
+                                <span>Socket Programming</span>
+                                <span>Threading</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Project 3 -->
+            <!-- SKILLS SECTION -->
+            <section id="skills" class="py-20">
+                <h2 class="text-3xl font-bold mb-10 flex items-center">
+                    <span class="text-term-green mr-4">05.</span> Tech Skills
+                    <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Languages -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">
+                            <span class="text-term-cyan">></span> Programming
+                            Languages
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >Java</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >Python</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >C++</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >JavaScript</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >TypeScript</span
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Frameworks/Libraries -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">
+                            <span class="text-term-cyan">></span> Web
+                            Development
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >ReactJS</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >NextJS</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >NodeJS</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >ExpressJS</span
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">
+                            <span class="text-term-cyan">></span> Mobile
+                            Development
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >React Native</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >Expo</span
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">
+                            <span class="text-term-cyan">></span>
+                            Database Systems
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >MySQL</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >MongoDB</span
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">
+                            <span class="text-term-cyan">></span>
+                            Tools
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >VS Code</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >Git</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >Postman</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >Figma</span
+                            >
+                            <span
+                                class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green"
+                                >Linux</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CERTIFICATIONS SECTION -->
+            <section id="achievements" class="py-20">
+                <h2 class="text-3xl font-bold mb-10 flex items-center">
+                    <span class="text-term-green mr-4">06.</span> Certifications
+                    & Achievements
+                    <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
+                </h2>
+
+                <div class="space-y-4">
+                    <div
+                        class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors"
+                    >
+                        <i class="fas fa-trophy text-yellow-500"></i>
+                        <span>Hacktoberfest 2023</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors"
+                    >
+                        <i class="fas fa-trophy text-yellow-500"></i>
+                        <span>Finalists, CyberZee’24</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors"
+                    >
+                        <i class="fas fa-trophy text-yellow-500"></i>
+                        <span>Finalists, Cypher 2.0</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors"
+                    >
+                        <i class="fas fa-certificate text-term-green"></i>
+                        <span>Postman API Fundamentals Student Expert</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors"
+                    >
+                        <i class="fas fa-certificate text-term-green"></i>
+                        <span>Play It Safe: Manage Security Risks</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors"
+                    >
+                        <i class="fas fa-certificate text-term-green"></i>
+                        <span>Foundations of Cybersecurity</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONNECT SECTION -->
+            <section
+                id="connect"
+                class="py-20 mb-20 text-center max-w-2xl mx-auto"
+            >
+                <h2 class="text-term-green font-bold text-lg mb-4">
+                    07. What's Next?
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Get In Touch
+                </h3>
+                <p class="text-gray-400 mb-10">
+                    I'm currently looking for opportunities. Whether you have a
+                    question or just want to say hi, my inbox is always open!
+                </p>
+
                 <div
-                    class="bg-term-card rounded-lg overflow-hidden border border-gray-800 hover:translate-y-[-5px] transition-transform duration-300">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <i class="far fa-folder text-4xl text-term-green"></i>
-                            <div class="flex gap-4">
-                                <a href="https://github.com/Thejas0604/cli-chatroom"
-                                    class="text-gray-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">
-                            CLI Chatroom
-                        </h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            A real-time Chat Client implemented using
-                            Python's socket programming and threading
-                            capabilities.
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-term-dim">
-                            <span>Python</span>
-                            <span>Socket Programming</span>
-                            <span>Threading</span>
-                        </div>
+                    class="bg-term-card p-6 rounded text-left border border-gray-800 mb-8"
+                >
+                    <div class="text-gray-500 text-xs mb-2">
+                        user@server:~$ mail -s "Subject"
+                        thejas.meddepola@gmail.com
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SKILLS SECTION -->
-        <section id="skills" class="py-20">
-            <h2 class="text-3xl font-bold mb-10 flex items-center">
-                <span class="text-term-green mr-4">05.</span> Tech Skills
-                <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Languages -->
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-4">
-                        <span class="text-term-cyan">></span> Programming
-                        Languages
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">Java</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">Python</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">C++</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">JavaScript</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">TypeScript</span>
-                    </div>
+                    <a
+                        href="mailto:thejas.meddepola@gmail.com"
+                        rel="noopener noreferrer"
+                    >
+                        <button
+                            type="button"
+                            id="contact-close-btn"
+                            class="w-full border border-term-green text-term-green hover:bg-term-green hover:text-black font-bold py-2 rounded transition-colors"
+                        >
+                            Email Me
+                        </button>
+                    </a>
                 </div>
 
-                <!-- Frameworks/Libraries -->
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-4">
-                        <span class="text-term-cyan">></span> Web
-                        Development
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">ReactJS</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">NextJS</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">NodeJS</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">ExpressJS</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-4">
-                        <span class="text-term-cyan">></span> Mobile
-                        Development
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">React
-                            Native</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">Expo</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-4">
-                        <span class="text-term-cyan">></span>
-                        Database Systems
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">MySQL</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">MongoDB</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-4">
-                        <span class="text-term-cyan">></span>
-                        Tools
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">VS
-                            Code</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">Git</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">Postman</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">Figma</span>
-                        <span
-                            class="bg-gray-800 border border-gray-700 px-3 py-1 text-sm rounded text-term-green">Linux</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CERTIFICATIONS SECTION -->
-        <section id="achievements" class="py-20">
-            <h2 class="text-3xl font-bold mb-10 flex items-center">
-                <span class="text-term-green mr-4">06.</span> Certifications
-                & Achievements
-                <span class="ml-4 h-px bg-gray-700 flex-grow"></span>
-            </h2>
-
-            <div class="space-y-4">
-                <div class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                    <i class="fas fa-trophy text-yellow-500"></i>
-                    <span>Hacktoberfest 2023</span>
-                </div>
-                <div class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                    <i class="fas fa-trophy text-yellow-500"></i>
-                    <span>Finalists, CyberZee’24</span>
-                </div>
-                <div class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                    <i class="fas fa-trophy text-yellow-500"></i>
-                    <span>Finalists, Cypher 2.0</span>
-                </div>
-                <div class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                    <i class="fas fa-certificate text-term-green"></i>
-                    <span>Postman API Fundamentals Student Expert</span>
-                </div>
-                <div class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                    <i class="fas fa-certificate text-term-green"></i>
-                    <span>Play It Safe: Manage Security Risks</span>
-                </div>
-                <div class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                    <i class="fas fa-certificate text-term-green"></i>
-                    <span>Foundations of Cybersecurity</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONNECT SECTION -->
-        <section id="connect" class="py-20 mb-20 text-center max-w-2xl mx-auto">
-            <h2 class="text-term-green font-bold text-lg mb-4">
-                07. What's Next?
-            </h2>
-            <h3 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                Get In Touch
-            </h3>
-            <p class="text-gray-400 mb-10">
-                I'm currently looking for opportunities. Whether you have a
-                question or just want to say hi, my inbox is always open!
-            </p>
-
-            <div class="bg-term-card p-6 rounded text-left border border-gray-800 mb-8">
-                <div class="text-gray-500 text-xs mb-2">
-                    user@server:~$ mail -s "Subject"
-                    thejas.meddepola@gmail.com
-                </div>
-                <a href="mailto:thejas.meddepola@gmail.com" rel="noopener noreferrer">
-                    <button type="button" id="contact-close-btn"
-                        class="w-full border border-term-green text-term-green hover:bg-term-green hover:text-black font-bold py-2 rounded transition-colors">
-                        Email Me
-                    </button>
-                </a>
-            </div>
-
-            <!-- <a
+                <!-- <a
                     href="mailto:email@example.com"
                     class="text-term-dim hover:text-term-green text-sm"
                     >Or email me directly</a
                 > -->
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer class="text-center py-6 text-xs text-gray-500">
-        <!-- <p>Built with HTML, Tailwind & Coffee.</p> -->
-        <p class="font-mono mt-1">
-            git commit -m "Initial portfolio release"
-        </p>
-        <p class="font-mono mt-1">Thejas Meddepola</p>
+        <footer class="text-center py-6 text-xs text-gray-500">
+            <!-- <p>Built with HTML, Tailwind & Coffee.</p> -->
+            <p class="font-mono mt-1">
+                git commit -m "Initial portfolio release"
+            </p>
+            <p class="font-mono mt-1">Thejas Meddepola</p>
 
-        <div class="mt-4 flex justify-center">
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fthejas.me&count_bg=%23238636&title_bg=%230d1117&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false"
-                alt="Views" />
-        </div>
-    </footer>
+            <div class="mt-4 flex justify-center">
+                <img
+                    src="https://visitor-badge.laobi.icu/badge?page_id=thejas.me&left_color=%2363a2f2&right_color=black"
+                    alt="Visitor badge"
+                />
+            </div>
+        </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // 1. Floating Header Logic
-        const navbar = document.getElementById("navbar");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add("glass-nav", "py-2");
-                navbar.classList.remove("py-4", "border-transparent");
-            } else {
-                navbar.classList.remove("glass-nav", "py-2");
-                navbar.classList.add("py-4", "border-transparent");
-            }
-        });
-
-        // 2. Typewriter Effect
-        const textElement = document.getElementById("typewriter");
-        const phrases = ["Developer", "CSE Undergraduate"];
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function type() {
-            const currentPhrase = phrases[phraseIndex];
-
-            if (isDeleting) {
-                textElement.textContent = currentPhrase.substring(
-                    0,
-                    charIndex - 1
-                );
-                charIndex--;
-            } else {
-                textElement.textContent = currentPhrase.substring(
-                    0,
-                    charIndex + 1
-                );
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                isDeleting = true;
-                setTimeout(type, 2000); // Wait before deleting
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                setTimeout(type, 500); // Wait before typing next
-            } else {
-                const speed = isDeleting ? 50 : 100;
-                setTimeout(type, speed);
-            }
-        }
-        document.addEventListener("DOMContentLoaded", type);
-
-        // 3. Mobile Menu Toggle
-        const btn = document.getElementById("mobile-menu-btn");
-        const menu = document.getElementById("mobile-menu");
-        const links = document.querySelectorAll(".mobile-link");
-
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-
-        // Close mobile menu when a link is clicked
-        links.forEach((link) => {
-            link.addEventListener("click", () => {
-                menu.classList.add("hidden");
+        <!-- JavaScript -->
+        <script>
+            // 1. Floating Header Logic
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("glass-nav", "py-2");
+                    navbar.classList.remove("py-4", "border-transparent");
+                } else {
+                    navbar.classList.remove("glass-nav", "py-2");
+                    navbar.classList.add("py-4", "border-transparent");
+                }
             });
-        });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener("click", function (event) {
-            if (!menu.classList.contains("hidden")) {
-                const isMenu = menu.contains(event.target);
-                const isButton = btn.contains(event.target);
-                if (!isMenu && !isButton) {
-                    menu.classList.add("hidden");
+            // 2. Typewriter Effect
+            const textElement = document.getElementById("typewriter");
+            const phrases = ["Developer", "CSE Undergraduate"];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentPhrase = phrases[phraseIndex];
+
+                if (isDeleting) {
+                    textElement.textContent = currentPhrase.substring(
+                        0,
+                        charIndex - 1
+                    );
+                    charIndex--;
+                } else {
+                    textElement.textContent = currentPhrase.substring(
+                        0,
+                        charIndex + 1
+                    );
+                    charIndex++;
+                }
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    setTimeout(type, 2000); // Wait before deleting
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(type, 500); // Wait before typing next
+                } else {
+                    const speed = isDeleting ? 50 : 100;
+                    setTimeout(type, speed);
                 }
             }
-        });
+            document.addEventListener("DOMContentLoaded", type);
 
-        // 4. Form Simulation (Prevent Default)
-        document
-            .getElementById("contact-form")
-            .addEventListener("submit", function (e) {
-                e.preventDefault();
-                const btn = this.querySelector("button");
-                const originalText = btn.innerText;
+            // 3. Mobile Menu Toggle
+            const btn = document.getElementById("mobile-menu-btn");
+            const menu = document.getElementById("mobile-menu");
+            const links = document.querySelectorAll(".mobile-link");
 
-                btn.innerText = "Sending...";
-                btn.classList.add("opacity-50", "cursor-not-allowed");
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
 
-                setTimeout(() => {
-                    btn.innerText = "Message Sent!";
-                    btn.classList.remove(
-                        "border-term-green",
-                        "text-term-green"
-                    );
-                    btn.classList.add("border-term-cyan", "text-term-cyan");
-                    this.reset();
+            // Close mobile menu when a link is clicked
+            links.forEach((link) => {
+                link.addEventListener("click", () => {
+                    menu.classList.add("hidden");
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!menu.classList.contains("hidden")) {
+                    const isMenu = menu.contains(event.target);
+                    const isButton = btn.contains(event.target);
+                    if (!isMenu && !isButton) {
+                        menu.classList.add("hidden");
+                    }
+                }
+            });
+
+            // 4. Form Simulation (Prevent Default)
+            document
+                .getElementById("contact-form")
+                .addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const btn = this.querySelector("button");
+                    const originalText = btn.innerText;
+
+                    btn.innerText = "Sending...";
+                    btn.classList.add("opacity-50", "cursor-not-allowed");
 
                     setTimeout(() => {
-                        btn.innerText = originalText;
-                        btn.classList.add(
+                        btn.innerText = "Message Sent!";
+                        btn.classList.remove(
                             "border-term-green",
                             "text-term-green"
                         );
-                        btn.classList.remove(
-                            "border-term-cyan",
-                            "text-term-cyan",
-                            "opacity-50",
-                            "cursor-not-allowed"
-                        );
-                    }, 3000);
-                }, 1500);
-            });
-    </script>
-</body>
+                        btn.classList.add("border-term-cyan", "text-term-cyan");
+                        this.reset();
 
+                        setTimeout(() => {
+                            btn.innerText = originalText;
+                            btn.classList.add(
+                                "border-term-green",
+                                "text-term-green"
+                            );
+                            btn.classList.remove(
+                                "border-term-cyan",
+                                "text-term-cyan",
+                                "opacity-50",
+                                "cursor-not-allowed"
+                            );
+                        }, 3000);
+                    }, 1500);
+                });
+        </script>
+    </body>
 </html>
